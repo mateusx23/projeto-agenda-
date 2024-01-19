@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+{% block content %}
+
+<h2>listar cursos</h2>
+<a href="{% url 'incluir_curso' %}">cadrastrar novo curso</a>
+<table>
+    <tr>
+        <th>nome</th>
+        <th>cargas horaria</th>
+    </tr>
+</table>
+<tbody>
+    {% for a in curso %}
+    <tr>
+         <td>{{a.nome}}</td>
+    </tr>
+    <td>
+        <a href="{% url 'editar_curso' a.id %}">Editar</a>
+        <a href="#">Excluir</a>
+    </td>
+    {% endfor %}
+</tbody>
+{% endblock %}
