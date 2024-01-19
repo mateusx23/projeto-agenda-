@@ -14,10 +14,17 @@ urlpatterns = [
 
     path('editar_aluno/<int:id>', views.editar_aluno,
          name='editar_aluno'),
+
     path('incluir_curso', views.incluir_curso,
          name='incluir_curso'),
 
     path('editar_curso/<int:id>', views.editar_curso,
-         name='editar_curso')
+         name='editar_curso'),
+
+    path('excluir_aluno/<int:id>', views.excluir_aluno,
+         name='excluir_aluno'),
+
+    path('excluir_curso/<int:id>', views.excluir_curso,
+         name='excluir_curso') 
 
 ]

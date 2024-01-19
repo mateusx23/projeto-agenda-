@@ -61,3 +61,14 @@ def incluir_curso(request):
 
     return render(request,'incluir_curso.html',
                   {'form': form})
+
+
+def excluir_aluno(request,id):
+    aluno = Aluno.objects.get(id=id)
+    aluno.delete()
+    return redirect('listar_Alunos')
+
+def excluir_curso(request,id):
+    aluno = Curso.objects.get(id=id)
+    aluno.delete()
+    return redirect('listar_cursos')

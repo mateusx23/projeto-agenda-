@@ -10,13 +10,13 @@
     </tr>
 </table>
 <tbody>
-    {% for a in curso %}
+    {% for a in cursos %}
     <tr>
          <td>{{a.nome}}</td>
     </tr>
     <td>
         <a href="{% url 'editar_curso' a.id %}">Editar</a>
-        <a href="#">Excluir</a>
+        <a href="{% url 'excluir_curso' a.id %}">Excluir</a>
     </td>
     {% endfor %}
 </tbody>
