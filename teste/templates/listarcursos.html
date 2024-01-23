@@ -3,21 +3,23 @@
 
 <h2>listar cursos</h2>
 <a href="{% url 'incluir_curso' %}">cadrastrar novo curso</a>
-<table>
+<table class="table table-striped">
     <tr>
         <th>nome</th>
         <th>cargas horaria</th>
     </tr>
-</table>
+
 <tbody>
     {% for a in cursos %}
     <tr>
          <td>{{a.nome}}</td>
-    </tr>
+    
     <td>
         <a href="{% url 'editar_curso' a.id %}">Editar</a>
         <a href="{% url 'excluir_curso' a.id %}">Excluir</a>
     </td>
+</tr>
     {% endfor %}
 </tbody>
+</table>
 {% endblock %}

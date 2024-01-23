@@ -5,7 +5,7 @@ from teste.models import Aluno,Curso
 # Create your views here.
 
 def index(request):
-    return HttpResponse("ola mundo! agora voce e web")
+    return render(request, 'inicio.html')
 
 def listar_Aluno(request):
     Alunos = Aluno.objects.all()
