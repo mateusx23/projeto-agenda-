@@ -46,6 +46,51 @@
     {% block content %}
     {% endblock %}
 </div>
+<div class="modal fade " id="telaAviso" tabindex="-1" role="dialog" 
+     aria-labelledby="talaAvisolabel" aria-hidden="true">
+     <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title">exclusao</h4>
+            </div>
+            <form id="modal form">
+                <div class="modal-body">
+                    <label> deseja Excluir</label>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn-secondary" 
+                    data-dismiss="modal"
+                    onclick="fechartela()">cancelar</button> 
+                    <button type="button" class="btn btn-danger"
+                    data-dismiss="modal"
+                    onclick="Excluir()">Excluir</button>
+                    {% csrf_token %}
+                </div>
+            </form>
+        </div>
+     </div>
+ </div>
+<script>
+    caminho="";
+    var telaAviso = document.getElementById("telaAviso");
+    function abrirTela(url){
+        telaAviso.style.display = "block";
+        telaAviso.className = "modal fade show";
+        caminho = url
+
+      }
+      
+    function fechartela(){
+        telaAviso.style.display = "none";
+        telaAviso.className = "modal fade";
+
+    }
+    
+    function Excluir(){
+        window.location = caminho;
+        fechartela();
+    }
+</script>
 </body>
 {% bootstrap_javascript %}
 </html>
