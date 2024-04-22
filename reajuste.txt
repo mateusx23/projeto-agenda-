@@ -1,0 +1,10 @@
+def calcular_reajuste_salario(salario): if salario <= 280.00: percentual_aumento = 20 elif salario > 280.00 and salario <= 700.00: percentual_aumento = 15 elif salario > 700.00 and salario <= 1500.00: percentual_aumento = 10 else: percentual_aumento = 5
+aumento = salario * percentual_aumento / 100 novo_salario = salario + aumento
+
+return salario, percentual_aumento, aumento, novo_salario
+
+salario = float(input("Digite o salário atual: "))
+
+salario_antes_reajuste, percentual_aumento, aumento, novo_salario = calcular_reajuste_salario(salario)
+
+print("Salário antes do reajuste:", salario_antes_reajuste) print("Percentual de aumento aplicado:", percentual_aumento, "%") print("Valor do aumento:", aumento) print("Novo salário, após o aumento:", novo_salario)

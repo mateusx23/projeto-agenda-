@@ -1,0 +1,6 @@
+a = input("digite uma letra")
+ 
+if (a == 'a' or a == 'e' or a == 'o'or a == 'u'):
+    print("e uma vogal")
+else:
+    print("nao e uma vogal")

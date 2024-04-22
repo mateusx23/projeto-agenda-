@@ -1,0 +1,18 @@
+number = int(input("Digite um número de 1 a 7: "))
+
+if number == 1:
+    print("Domingo")
+elif number == 2:
+    print("Segunda-feira")
+elif number == 3:
+    print("Terça-feira")
+elif number == 4:
+    print("Quarta-feira")
+elif number == 5:
+    print("Quinta-feira")
+elif number == 6:
+    print("Sexta-feira")
+elif number == 7:
+    print("Sábado")
+else:
+    print("Valor inválido")

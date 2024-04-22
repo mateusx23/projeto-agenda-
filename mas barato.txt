@@ -1,0 +1,15 @@
+# Pergunta o preço de três produtos
+preco_produto1 = float(input("Digite o preço do primeiro produto: R$"))
+preco_produto2 = float(input("Digite o preço do segundo produto: R$"))
+preco_produto3 = float(input("Digite o preço do terceiro produto: R$"))
+
+# Verifica qual produto é o mais barato
+if preco_produto1 < preco_produto2 and preco_produto1 < preco_produto3:
+    produto_mais_barato = "Produto 1"
+elif preco_produto2 < preco_produto1 and preco_produto2 < preco_produto3:
+    produto_mais_barato = "Produto 2"
+else:
+    produto_mais_barato = "Produto 3"
+
+# Mostra o produto mais barato
+print("Você deve comprar o", produto_mais_barato)

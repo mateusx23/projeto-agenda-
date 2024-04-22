@@ -1,0 +1,8 @@
+def verificaSinal(val):
+    if val > 0:
+        return "positivo"
+    elif val < 0:
+        return "negativo"
+
+print(verificaSinal(3))
+print(verificaSinal(-1))

@@ -1,0 +1,28 @@
+print("Ola, bem vindo ao meu quiz de jogos!,ao fim do quiz, o programa irá somar todos seus pontos e dizer sua pontuacao")
+
+pontuacao = 0
+
+
+resposta1 = input("Qual foi considerado o melhor call of duty da saga?")
+if resposta1.lower() == "Call of Duty Warzone" or "Call of Duty Black Ops":
+    pontuacao += 10
+    
+else:
+    print("voce erro!, a resposta certa e Call of Duty Warzone" )
+    
+resposta2 = input("Qual foi considerado o melhor Bf de toda a saga?")
+if resposta2.lower() == "Battlefield 4" or "Battlefield 1":
+   pontuacao += 10
+   
+else:
+    print("voce erro!, a resposta certa e Battlefield 4")
+
+resposta3 = input("Qual foi considerado o melhor jogo de zumbi da saga?")
+if resposta3.lower() == "resident evil" or "the last of us":
+   pontuacao += 10
+
+else:
+    print("voce erro!, a resposta certa e resident evil")
+
+print("sua pontuacao final é:",pontuacao)
+    

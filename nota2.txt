@@ -1,0 +1,24 @@
+notap1 = float(input("Digite a primeira nota parcial: "))
+notap2 = float(input("Digite a segunda nota parcial: "))
+
+media = (notap1 + notap2) / 2
+
+if media >= 9.0:
+    conceito = 'A'
+elif media >= 7.5:
+    conceito = 'B'
+elif media >= 6.0:
+    conceito = 'C'
+elif media >= 4.0:
+    conceito = 'D'
+else:
+    conceito = 'E'
+
+print("Notas: {} e {}".format(notap1, notap2))
+print("Média: {}".format(media))
+print("Conceito: {}".format(conceito))
+
+if conceito == 'A' or conceito == 'B' or conceito == 'C':
+    print("APROVADO")
+else:
+    print("REPROVADO")
